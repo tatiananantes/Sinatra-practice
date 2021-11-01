@@ -17,7 +17,13 @@ get '/raining' do
   "It's raining outside!"
 end
 
-get '/cat' do
+get '/random-cat' do
   @cat_name = ["Amigo", "Mel", "Almond"].sample
+  erb(:index)
+end
+
+get '/named-cat' do
+  p "These are the paramteres: #{params}"
+  @cat_name = params[:name]
   erb(:index)
 end
