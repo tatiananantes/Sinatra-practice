@@ -18,5 +18,6 @@ get '/raining' do
 end
 
 get '/cat' do
+  @cat_name = ["Amigo", "Mel", "Almond"].sample
   erb(:index)
 end
